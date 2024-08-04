@@ -21,6 +21,7 @@
         "format-fr": "FR",
 	"min-length": 5,
 	"tooltip-format": "click to toggle languages",
+	"on-click": "sh ~/.config/waybar/scripts/toggle_layout.sh"
     },
 
     "keyboard-state": {
@@ -29,7 +30,7 @@
         "format": "{icon} ",
         "format-icons": {
             "locked": " ",
-            "unlocked": " "
+            "unlocked": " ",
         },
     },
 
@@ -143,6 +144,7 @@
 "default": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]},
 	"on-update": "$HOME/.config/waybar/scripts/check_battery.sh",
+	"interval": 15,
     },
     "tray": {
         "icon-size": 16,
