@@ -62,7 +62,7 @@
 	"format-disconnected": "Disconnected ⚠",
 	"format-icons": ["󰤟", "󰤢", "󰤥", "󰤨" ],
 	"tooltip-format": "SSID: {essid}\n {ifname}: {ipaddr}/{cidr}\nStrength: {signalStrength}%/{signaldBm}dBm\nUP:{bandwidthUpBytes} DN:{bandwidthDownBytes}\n freq: {frequency}GHz ",
-	"interval": 3,
+	"interval": 1,
 	"on-click": "alacritty -e iwctl"
     },
     "clock": {
