@@ -189,7 +189,7 @@ window#waybar.hidden {
     background: #383c4a;
 }
 
-#battery.charging {
+#battery.charging, #battery.full {
     color: #ffffff;
     background-color: #26A65B;
 }
