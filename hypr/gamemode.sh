@@ -14,3 +14,4 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
 fi
 hyprctl reload
 pkill -SIGUSR2 waybar
+hyprshade on blue-light-filter
