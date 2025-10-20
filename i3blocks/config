@@ -1,0 +1,69 @@
+[restart]
+full_text=Restart
+command=sway reload
+interval=0
+
+[mediaplayer]
+command=./mediaplayer/mediaplayer
+instance=mpd
+interval=5
+signal=10
+
+[gpu-load]
+command=./gpu-load/gpu-load
+label=GPU: 
+interval=5
+#min_width=GPU 100% 100% 100% 100%
+#GPU_BRAND=AMD // or AMD
+#T_WARN=70
+#T_CRIT=90
+
+[disk_os]
+label=/dev/sda2: 
+instance=/
+interval=1
+command=./disk_usage/disk_usage format="{used:.1f}GiB / {total:.1f}GiB" warn_color=#90ce00
+
+[bandwidth]
+command=./bandwidth2/bandwidth2 
+interval=persist
+markup=pango
+LABEL=RX/TX:
+#INTERFACE=eth0
+USE_BITS=1
+#USE_BYTES=1
+WARN_RX=307200
+WARN_TX=307200
+#CRIT_RX=0
+#CRIT_TX=0
+#USE_SI=0
+
+[cpu_usage]
+command=perl ./cpu_usage/cpu_usage
+interval=10
+LABEL=CPU: 
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+COLOR_NORMAL=#FFFFFF
+#COLOR_WARN=#FFFC00
+#COLOR_CRITz=#FF0000
+
+[arch-update]
+command=python3 ./arch-update/arch-update.py -y -q
+interval=3600
+#aur=true
+WATCH=^linux.* ^pacman.*
+markup=pango
+#LABEL=Update:
+
+[get-ip]
+command=wget -qO - icanhazip.com
+interval=once
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
+min_width=180
+align=center
